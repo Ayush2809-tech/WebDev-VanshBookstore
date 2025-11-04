@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Catalogue — 📚Vansh Bookstore</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Header same as index */
+        .site-header {
+            background: #9feda1;
+            padding: 18px 0;
+            border-bottom: 1px solid #e6e6e6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #006bff;
+        }
+
+        /* Nav same as index */
+        .nav-links {
+            display: flex;
+            gap: 14px;
+        }
+
+        .nav-links a {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 2px solid #007bff;
+            background: #f2f2f2;
+            color: #000;
+            transition: .25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: #007bff;
+            color: rgb(239, 205, 205);
+        }
+
+        body {
+            background: #f8faff;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #dba0a0;
+        }
+
+        /* Book grid same spacing style */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding-bottom: 40px;
+        }
+
+        .book-card {
+            background: #ebbfbf;
+            padding: 18px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+        }
+
+        .book-card img {
+            width: 130px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: .2s;
+        }
+
+        .btn:hover {
+            background: #005dcb;
+        }
+
+        /* Toast message */
+        .toast-msg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #222;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            animation: fadeInOut 2s ease;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div style="display:flex;align-items:center;gap:10px;">
+                <img src="images/logo.png" width="55">
+                <h1 class="logo">My Bookstore</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="catalogue.html" class="active">📚 Catalogue</a></li>
+                    <li><a href="cart.html">🛒 Cart</a></li>
+                    <li><a href="login.html">🔐 Login</a></li>
+                    <li><a href="register.html">📝 Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h2>Book Catalogue</h2>
+
+        <div class="books-grid">
+
+            <!-- Same books, same pics, same names -->
+            <div class="book-card">
+                <img src="images/book1.jpg">
+                <h3>The Great Adventure</h3>
+                <p>₹399</p>
+                <button class="btn" onclick="addToCart('The Great Adventure',399)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book2.jpg">
+                <h3>Science Wonders</h3>
+                <p>₹299</p>
+                <button class="btn" onclick="addToCart('Science Wonders',299)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book3.jpg">
+                <h3>Love & Life</h3>
+                <p>₹350</p>
+                <button class="btn" onclick="addToCart('Love & Life',350)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book4.jpg">
+                <h3>The Story of my Life</h3>
+                <p>₹369</p>
+                <button class="btn" onclick="addToCart('The Story of my Life',369)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book5.jpg">
+                <h3>RUSKIN BOND</h3>
+                <p>₹299</p>
+                <button class="btn" onclick="addToCart('RUSKIN BOND',299)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book6.jpg">
+                <h3>The Great Indian Novel</h3>
+                <p>₹400</p>
+                <button class="btn" onclick="addToCart('The Great Indian Novel',400)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book7.jpg">
+                <h3>The Psychology of Money</h3>
+                <p>₹100</p>
+                <button class="btn" onclick="addToCart('The Psychology of Money',100)">Add to Cart</button>
+            </div>
+
+            <div class="book-card">
+                <img src="images/book8.jpg">
+                <h3>Indian Popular Cinema</h3>
+                <p>₹129</p>
+                <button class="btn" onclick="addToCart('Indian Popular Cinema',129)">Add to Cart</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function addToCart(name, price) {
+            let c = JSON.parse(localStorage.getItem("cart")) || [];
+            let ex = c.find(i => i.name === name);
+            ex ? ex.qty++ : c.push({ name, price, qty: 1 });
+            localStorage.setItem("cart", JSON.stringify(c));
+
+            let t = document.createElement("div");
+            t.className = "toast-msg";
+            t.innerText = name + " added to cart!";
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 2000);
+        }
+    </script>
+
+</body>
+
+</html>

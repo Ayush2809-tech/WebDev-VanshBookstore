@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home — 📚Vansh Booktore</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4c6ef5, #b197fc);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* NAVBAR Glass */
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.25);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 12px 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        main.container {
+            flex: 1;
+            text-align: center;
+            padding: 40px 0;
+            color: #fff;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Slider */
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: none;
+            max-width: 100%;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider img:first-child {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 12px;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header glass-nav">
+        <div class="container nav-flex">
+            <div class="logo-area">
+                <img src="images/logo.png" width="55">
+                <h1 style="color:white;">My Bookstore</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">🏠 Home</a></li>
+                    <li><a href="catalogue.html">📚 Catalogue</a></li>
+                    <li><a href="cart.html">🛒 Cart</a></li>
+                    <li><a href="login.html">🔐 Login</a></li>
+                    <li><a href="register.html">📝 Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Welcome to My Bookstore 📚✨</h2>
+        <p>Find the best books with just one click!</p>
+
+        <!-- ✅ Slider -->
+        <div class="slider">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1920&q=90"
+                alt="Bookstore slider">
+            <img src="images/bookstore2.png">
+            <img src="images/bookstore3.png">
+        </div>
+    </main>
+
+    <script>
+        let slides = document.querySelectorAll(".slider img");
+        let i = 0;
+        setInterval(() => {
+            slides.forEach(s => s.style.display = "none");
+            slides[i].style.display = "block";
+            i = (i + 1) % slides.length;
+        }, 2500);
+    </script>
+
+    <footer>
+        📚 My Bookstore | Made with ❤️ by Ayush
+    </footer>
+
+</body>
+
+</html>

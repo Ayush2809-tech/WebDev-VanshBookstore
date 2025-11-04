@@ -1,0 +1,356 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f6f7fb;
+    color: #333;
+}
+
+/* HEADER */
+.site-header {
+    background: #0d6efd;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* PAGES CONTAINER */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* FORM STYLES */
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.btn {
+    width: 100%;
+    background: #0d6efd;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #0b5ed7;
+}
+
+/* BOOK CARDS */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* Add to cart button */
+.book-card .btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.book-card .btn:hover {
+    background: #4c6ef5;
+    transform: scale(1.08);
+}
+
+/* ========== Animations ========== */
+.book-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Floating Cart Button ========== */
+.floating-cart {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 14px 20px;
+    background: #0d6efd;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.floating-cart:hover {
+    background: #0b5ed7;
+}
+
+/* Count bubble in icon */
+.cart-count {
+    background: red;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: .9em;
+    position: absolute;
+    top: -8px;
+    right: -6px;
+}
+
+/* ========== Dark Mode ========== */
+.dark {
+    background: #121212;
+    color: #ddd !important;
+}
+
+.dark .nav-btn {
+    background: #222;
+    color: #fff;
+}
+
+.dark .book-card {
+    background: #1c1c1c;
+}
+
+/* Glass Navbar */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Mobile */
+@media(max-width: 700px) {
+    .nav-links {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+}
+
+body {
+    padding-top: 90px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 18px;
+    background: #007bff;
+    color: white;
+    margin-top: 40px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #111;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background: #575757;
+}
+
+/* Page Area */
+.content {
+    margin-left: 250px;
+    padding: 25px;
+    width: 100%;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 1000;
+        color: #111;
+        background: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+}

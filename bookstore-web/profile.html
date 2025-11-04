@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile —📚vansh Bookstore</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #3d5af1, #9d4edd);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            width: 360px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 22px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            text-align: center;
+            color: #fff;
+            box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.2);
+            animation: fadeUp .9s ease;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .profile-img-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: auto;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, #ff6ec7, #4c6ef5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card img {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        h2 {
+            margin-top: 12px;
+            font-size: 1.5rem;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            opacity: .9;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 12px;
+            padding: 12px;
+            background: linear-gradient(135deg, #fff, #e8e7ff);
+            border: none;
+            border-radius: 14px;
+            color: #3d5af1;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #4c6ef5, #9d4edd);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .icon-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .icon-buttons button {
+            background: rgba(255, 255, 255, 0.18);
+            border: none;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            backdrop-filter: blur(8px);
+            color: #fff;
+            transition: .3s;
+        }
+
+        .icon-buttons button:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.12);
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: .95rem;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <div class="profile-img-wrapper">
+            <img src="https://i.pinimg.com/474x/44/f6/c0/44f6c0a8186d999864bfac9e8e1f7375.jpg">
+        </div>
+
+        <h2>Ayush Saxena</h2>
+
+        <div class="profile-info">
+            <p>📧 ayush@example.com</p>
+            <p>📞 9528055151</p>
+            <p>📍 India</p>
+        </div>
+
+        <div class="icon-buttons">
+            <button>⚙</button>
+            <button>📚</button>
+            <button>🛒</button>
+        </div>
+
+        <button class="btn">Logout</button>
+    </div>
+
+    <footer>📚 My Bookstore | Made with ❤️ by Ayush</footer>
+
+</body>
+
+</html>
