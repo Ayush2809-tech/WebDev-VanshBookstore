@@ -2,13 +2,6 @@
 ===========================================================
                  ONLINE BOOKSTORE WEBSITE
 ===========================================================
-
-Project Title:     Online Bookstore Web Application  
-Course / Lab:      Web Design Workshop Lab  
-Student Name:      Ayush Saxena  
-Technology Stack:  HTML, CSS, JavaScript  
-Academic Purpose:  Front-End Web Project with Form Validation
-
 -----------------------------------------------------------
 📌 INTRODUCTION
 -----------------------------------------------------------
